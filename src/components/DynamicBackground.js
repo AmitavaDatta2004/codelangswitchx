@@ -1,4 +1,4 @@
-
+'use client'
 import { useEffect, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
@@ -24,6 +24,7 @@ function AnimatedSphere({ darkMode }) {
 
 export default function DynamicBackground({ darkMode }) {
   return (
+    <>
     <div className="fixed top-0 left-0 w-full h-full -z-10">
       <Canvas camera={{ position: [0, 0, 5] }}>
         <ambientLight intensity={0.5} />
@@ -32,5 +33,6 @@ export default function DynamicBackground({ darkMode }) {
         <OrbitControls enableZoom={false} />
       </Canvas>
     </div>
+    </>
   )
 }

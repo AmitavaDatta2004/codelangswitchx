@@ -2,7 +2,6 @@
   "name": "langswitchx",
   "version": "0.1.0",
   "private": true,
-  "homepage":"./",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,11 +19,13 @@
     "@splinetool/runtime": "^1.9.28",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.11.1",
     "lucide-react": "^0.446.0",
     "next": "14.2.13",
     "next-themes": "^0.3.0",
-    "react": "^18",
+    "react": "^18.3.1",
     "react-dom": "^18",
+    "react-scripts": "^5.0.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.169.0"

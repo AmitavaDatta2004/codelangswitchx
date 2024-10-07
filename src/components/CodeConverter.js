@@ -1,4 +1,4 @@
-
+'use client'
 import { useState } from 'react'
 
 const languages = ['javascript', 'python', 'java', 'c++', 'ruby']
@@ -18,6 +18,8 @@ export default function CodeConverter({
   const [hoveredLanguage, setHoveredLanguage] = useState(null)
 
   return (
+
+    <>
     <div className="flex flex-col md:flex-row w-full gap-4">
       <div className="flex-1">
         <select
@@ -32,15 +34,15 @@ export default function CodeConverter({
           }}
           onMouseEnter={() => setHoveredLanguage(sourceLanguage)}
           onMouseLeave={() => setHoveredLanguage(null)}
-        >
+          >
           {languages.map((lang) => (
             <option
-              key={lang}
-              value={lang}
-              style={{
-                backgroundColor: languageColors[lang],
-                color: '#000',
-              }}
+            key={lang}
+            value={lang}
+            style={{
+              backgroundColor: languageColors[lang],
+              color: '#000',
+            }}
             >
               {lang}
             </option>
@@ -53,7 +55,7 @@ export default function CodeConverter({
             darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'
           }`}
           placeholder="Enter your code here..."
-        />
+          />
       </div>
       <div className="flex-1">
         <select
@@ -68,15 +70,15 @@ export default function CodeConverter({
           }}
           onMouseEnter={() => setHoveredLanguage(targetLanguage)}
           onMouseLeave={() => setHoveredLanguage(null)}
-        >
+          >
           {languages.map((lang) => (
             <option
-              key={lang}
-              value={lang}
-              style={{
-                backgroundColor: languageColors[lang],
-                color: '#000',
-              }}
+            key={lang}
+            value={lang}
+            style={{
+              backgroundColor: languageColors[lang],
+              color: '#000',
+            }}
             >
               {lang}
             </option>
@@ -89,16 +91,17 @@ export default function CodeConverter({
             darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'
           }`}
           placeholder="Converted code will appear here..."
-        />
+          />
       </div>
       <button
         onClick={onConvert}
         className={`mt-4 px-6 py-3 rounded text-white font-semibold transition-all duration-300 transform hover:scale-105 ${
           darkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'
         }`}
-      >
+        >
         Convert
       </button>
     </div>
+        </>
   )
 }

@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     setMounted(true)
   }, [])
 
-  if (!mounted) {
+  if (!  mounted) {
     return <>{children}</>
   }
 
